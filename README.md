@@ -8,11 +8,9 @@ tags:
   - typescript
 ---
 
-# ExpressJS Mongoose Example
+# ExpressJS Mongoose
 
-This example starts an [ExpressJS](https://expressjs.com/) server that connects to a Railway MongoDB database using [MongooseJS](https://mongoosejs.com/)
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/RM1WxR)
+[ExpressJS](https://expressjs.com/) server that connects to a Railway MongoDB database using [MongooseJS](https://mongoosejs.com/) Deployed on Railway
 
 ## ✨ Features
 
@@ -26,20 +24,20 @@ This example starts an [ExpressJS](https://expressjs.com/) server that connects 
 - Connect to your Railway project `railway link`
 - Start the development server `railway run yarn dev`
 
-## 📝 Notes
+# 📝 Reasons for choosing MongoDB
 
-The starter contains a single `Country` model that you can read from and write to.
+- NoSQL database is chosen to offer flexibility in storing semi-structured data, given the diverse data types we might encounter in an event management application
+- MongoDB is designed to scale horizontally, meaning that we can easily distribute data across multiple servers as we scale. Aligning well with increased usage of the application
 
-There are two main routes on the server:
+# 📝 Reasons for choosing Mongoose
 
-- A `GET` route - `/countries` which returns all the countries
-- A `POST` route - `/countries` which can be used to add a new country
+Mongoose ORM provides a structured way to model entities and maintain consistency and organization in our data.
 
-Example post request to add a new country:
+# 📝 Reasons for choosing Railway
 
-```
-curl -H "Content-Type: application/json" \
-  --request POST \
-  -d '{"name":"India","iso2code":"IN"}' \
-  http://localhost:3333/countries
-```
+- Simplified deployment process and integration with Github
+- Managed Database hosting
+- Environment management, easily store database and configuration settings securely whilst sharing with different deployments on the same project
+- Automated CI/CD deployment with Github repositry
+- Analytics tools to monitor traffic and performance
+- Since all deployments are managed on Railway, it is easy to monitor and configure seamlessly
